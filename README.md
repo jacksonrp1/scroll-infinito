@@ -1,70 +1,79 @@
-# Getting Started with Create React App
+<div style="display: inline">
+  <a href="https://www.jacksondev.com.br/" target="_blank">
+    <img src="https://img.shields.io/static/v1?label=Website&message=JacksonDev&color=red&style=for-the-badge&logo=webflow"/>
+  </a>
+  <a href="https://pt-br.reactjs.org/" target="_blank">
+    <img src="https://img.shields.io/static/v1?label=&message=React Js&color=202124&style=flat-square&logo=react"/>
+  </a>
+</div>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Projeto Scroll Infinito
 
-## Available Scripts
+### <a href="https://jacksonrp1.github.io/scroll-infinito/build/">Clique aqui</a> para visualizar o projeto concluído.
 
-In the project directory, you can run:
+#### Scripts Disponíveis
 
-### `npm start`
+```
+git clone https://github.com/jacksonrp1/scroll-infinito.git
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+#### Dentro do projeto recém-clonado, você pode executar:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+```
+npm install
+```
 
-### `npm test`
+No diretório do projeto, execute:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```
+npm start
+```
 
-### `npm run build`
+Abra http://localhost:3000 para visualizá-lo em seu navegador.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+A página será recarregada quando você fizer alterações.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+# Modo de usar :
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+![image](https://user-images.githubusercontent.com/83042566/214996980-6e6966df-0e5b-4c98-ba36-e9b48a77053a.png)
 
-### `npm run eject`
+Crie um useState para guardar os dados da requisição para a api (Linha 10).
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Crie um useState para percorrer o dados da api com ele (Linha 11).
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Use o map conforme (Linha 32 a 44).
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Ao chamar o component :
+<!--ts-->
+  * Informe
+    * ArrayDados: - Array com todos os dados .
+    * setDadosArrayMap: - Set do useState do Array novo que vai ser usado no .map .
+    * QtdItemPorScroll: - Quantidade de itens para cada renderização do scroll .
+<!--te-->
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
+## Abaixo do map, chame o componente.
+Exemplo:
+```javascript
+  <ScrollInfinito
+    ArrayDados={api}
+    setDadosArrayMap={setPostApi}
+    QtdItemPorScroll={postPorPg}
+  />
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Você também pode ver erros no console.
+```
+npm test
+```
+Inicia o executor de teste no modo de observação interativo.
+Consulte a seção sobre como executar testes para obter mais informações.
+```
+npm run build
+```
+Cria o aplicativo para produção na pasta `build`.
+Ele agrupa corretamente o React no modo de produção e otimiza a compilação para o melhor desempenho.
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+A compilação é minificada e os nomes dos arquivos incluem os hashes.
+Seu aplicativo está pronto para ser implantado!
