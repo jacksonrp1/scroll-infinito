@@ -16,7 +16,6 @@ export default function ScrollInfinito({
         ...post,
         ...ArrayDados.slice(indexPrimeiroPost, indexUltimoPost)
       ])
-      console.log('repetiu')
     }
   }, [postPaginaAtual, QtdItemPorScroll, setDadosArrayMap, ArrayDados])
 
