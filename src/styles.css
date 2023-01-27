@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&family=Sora:wght@100;200;300;400;500;600;700;800&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  outline: none;
+  text-decoration: none;
+  font-family: 'Sora', sans-serif;
+}
+
+.Scroll-Infinito-Container {
+  max-width: 1200px;
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: auto;
+  padding: 15px;
+}
+.Scroll-Infinito-Item {
+  padding: 15px 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 10px;
+  background-color: #c1c1c1;
+  border-radius: 10px;
+  box-shadow: 6px 6px 10px 0 rgb(0 0 0 / 60%);
+}
+.Scroll-Infinito-Item img {
+  object-fit: contain;
+  width: 230px;
+  height: 230px;
+}
+.Scroll-Infinito-Item p {
+  font-weight: 800;
+  font-size: 1.5em;
+}
